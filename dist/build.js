@@ -331,11 +331,14 @@ var Main = function () {
       if (this.timer) {
         this.stopTraining();
       }
+
+      var videoFrame = document.getElementById('video');
       var promise = this.video.play();
 
       if (promise !== undefined) {
         promise.then(function (_) {
           console.log("Autoplay started");
+          videoFrame.style.display = 'block';
         }).catch(function (error) {
           console.log("Autoplay prevented");
         });

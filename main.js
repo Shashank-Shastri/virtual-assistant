@@ -305,12 +305,15 @@ class Main {
     if (this.timer) {
       this.stopTraining();
     }
+
+    var videoFrame = document.getElementById('video');
     var promise = this.video.play();
 
     if (promise !== undefined) {
       promise
         .then((_) => {
           console.log("Autoplay started");
+          videoFrame.style.display = 'block';
         })
         .catch((error) => {
           console.log("Autoplay prevented");
