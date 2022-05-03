@@ -520,7 +520,9 @@ class TextToSpeech {
       console.log("Error speaking");
     };
 
-    utterThis.voice = this.voices.find(voice => voice.name === 'Google US English') ?? this.voices[this.selectedVoice];
+    const usEnVoice = this.voices.find(voice => voice.name === 'Google US English');
+
+    utterThis.voice = usEnVoice ? usEnVoice : this.voices[this.selectedVoice];
 
     utterThis.pitch = this.pitch;
     utterThis.rate = this.rate;
