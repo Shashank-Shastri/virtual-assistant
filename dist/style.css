@@ -5,17 +5,19 @@ body{
 }
 
 #video{
-  transform: rotateY(180deg);
-  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
-  -moz-transform:rotateY(180deg); /* Firefox */
-  position: absolute;
-  left: 32.5%;
-  top:5%;
-  z-index: 10;
-  background-color: black;
-  border: 8px solid black;
-  border-radius: 5px;
-}
+ 
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    position: absolute;
+    left: 32.5%;
+    top: 5%;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #200303;
+    border-radius: 5px;
+}       /*change*/
+
 
 #status{
   width: 300px;
